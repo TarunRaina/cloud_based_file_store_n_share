@@ -12,6 +12,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "SkyShelf",
   description: "Organise Beyond Limits",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

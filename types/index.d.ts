@@ -1,5 +1,42 @@
 /* eslint-disable no-unused-vars */
 
+declare interface FileDocument {
+  $id: string;
+  $collectionId: string;
+  $databaseId: string;
+  $createdAt: string;
+  $updatedAt: string;
+  $permissions: string[];
+  $sequence: number;
+  type: string;
+  name: string;
+  url: string;
+  extension: string;
+  size: number;
+  owner: {
+    fullName: string;
+    email: string;
+    avatar: string;
+  };
+  accountId: string;
+  users: string[];
+  bucketFileId: string;
+}
+
+declare interface UserDocument {
+  $id: string;
+  $collectionId: string;
+  $databaseId: string;
+  $createdAt: string;
+  $updatedAt: string;
+  $permissions: string[];
+  $sequence: number;
+  fullName: string;
+  email: string;
+  avatar: string;
+  accountId: string;
+}
+
 declare type FileType = "document" | "image" | "video" | "audio" | "other";
 
 declare interface ActionType {

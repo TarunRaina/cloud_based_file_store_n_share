@@ -62,7 +62,7 @@ export const uploadFile = async ({
   }
 };
 
-const createQueries = (currentUser: Models.Document) => {
+const createQueries = (currentUser: UserDocument) => {
   const queries = [
     Query.or([
       Query.equal("owner", [currentUser.$id]),
