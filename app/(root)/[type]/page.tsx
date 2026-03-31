@@ -4,6 +4,8 @@ import { getFiles } from "@/lib/actions/file.actions";
 import { Models } from "node-appwrite";
 import React from "react";
 
+export const dynamic = "force-dynamic";
+
 const Page = async ({ params }: SearchParamProps) => {
   const type = ((await params)?.type as string) || "";
   const files = await getFiles();

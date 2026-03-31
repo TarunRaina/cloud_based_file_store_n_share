@@ -1,0 +1,29 @@
+﻿
+> gdrive_clone@0.1.0 build
+> next build
+
+   Γû▓ Next.js 15.5.0
+   - Environments: .env.local
+   - Experiments (use with caution):
+     ┬╖ serverActions
+
+   Creating an optimized production build ...
+npm : uncaughtException [Error: EPERM: 
+operation not permitted, open 
+'D:\projs\gdrive_clone\.next\trace'] {
+At line:1 char:1
++ npm run build > build_output.txt 2>&1; 
+Get-Content build_output.txt | ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecifie 
+   d: (uncaughtExcepti....next\trace'] {  
+  :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeComma 
+   ndError
+ 
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'open',
+  path: 
+'D:\\projs\\gdrive_clone\\.next\\trace'
+}

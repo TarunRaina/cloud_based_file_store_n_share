@@ -1,0 +1,171 @@
+﻿docker-compose : --progress is a global 
+compose flag, better use `docker compose 
+--progress xx build ...
+At line:1 char:1
++ docker-compose build --progress=plain > 
+docker_build_output.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecifie 
+   d: (--progress is a...ss xx build ...  
+  :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeComma 
+   ndError
+ 
+time="2026-03-21T14:49:00+05:30" 
+level=warning msg="The 
+\"NEXT_APPWRITE_KEY\" variable is not 
+set. Defaulting to a blank string."
+time="2026-03-21T14:49:00+05:30" 
+level=warning msg="The 
+\"NEXT_PUBLIC_APPWRITE_ENDPOINT\" 
+variable is not set. Defaulting to a 
+blank string."
+time="2026-03-21T14:49:00+05:30" 
+level=warning msg="The 
+\"NEXT_PUBLIC_APPWRITE_PROJECT\" variable 
+is not set. Defaulting to a blank string."
+time="2026-03-21T14:49:00+05:30" 
+level=warning msg="The 
+\"NEXT_PUBLIC_APPWRITE_PROJECT_NAME\" 
+variable is not set. Defaulting to a 
+blank string."
+time="2026-03-21T14:49:00+05:30" 
+level=warning msg="The 
+\"NEXT_PUBLIC_APPWRITE_DATABASE\" 
+variable is not set. Defaulting to a 
+blank string."
+time="2026-03-21T14:49:00+05:30" 
+level=warning msg="The 
+\"NEXT_PUBLIC_APPWRITE_USERS_COLLECTION\" 
+variable is not set. Defaulting to a 
+blank string."
+time="2026-03-21T14:49:00+05:30" 
+level=warning msg="The 
+\"NEXT_PUBLIC_APPWRITE_FILES_COLLECTION\" 
+variable is not set. Defaulting to a 
+blank string."
+time="2026-03-21T14:49:00+05:30" 
+level=warning msg="The 
+\"NEXT_PUBLIC_APPWRITE_BUCKET\" variable 
+is not set. Defaulting to a blank string."
+ Image gdrive_clone-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 853B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 2.41kB 0.0s done
+#2 DONE 0.1s
+
+#3 [auth] library/node:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/node:20-alpine
+#4 ...
+
+#5 [internal] load metadata for docker.io/library/node:20-bookworm-slim
+#5 DONE 1.8s
+
+#4 [internal] load metadata for docker.io/library/node:20-alpine
+#4 DONE 1.8s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 211B 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 DONE 0.0s
+
+#8 [deps 1/5] FROM docker.io/library/node:20-alpine@sha256:b88333c42c23fbd91596ebd7fd10de239cedab9617de04142dde7315e3bc0afa
+#8 resolve docker.io/library/node:20-alpine@sha256:b88333c42c23fbd91596ebd7fd10de239cedab9617de04142dde7315e3bc0afa 0.1s done
+#8 DONE 0.1s
+
+#9 [runner 1/9] FROM docker.io/library/node:20-bookworm-slim@sha256:17281e8d1dc4d671976c6b89a12f47a44c2f390b63a989e2e327631041f544fd
+#9 resolve docker.io/library/node:20-bookworm-slim@sha256:17281e8d1dc4d671976c6b89a12f47a44c2f390b63a989e2e327631041f544fd
+#9 resolve docker.io/library/node:20-bookworm-slim@sha256:17281e8d1dc4d671976c6b89a12f47a44c2f390b63a989e2e327631041f544fd 0.1s done
+#9 DONE 0.1s
+
+#10 [runner 2/9] WORKDIR /app
+#10 CACHED
+
+#11 [runner 3/9] RUN addgroup --system --gid 1001 nodejs
+#11 CACHED
+
+#12 [runner 4/9] RUN adduser --system --uid 1001 nextjs
+#12 CACHED
+
+#7 [internal] load build context
+#7 transferring context: 11.50kB 0.0s done
+#7 DONE 0.0s
+
+#13 [builder 2/6] WORKDIR /app
+#13 CACHED
+
+#14 [deps 2/5] RUN apk add --no-cache libc6-compat
+#14 CACHED
+
+#15 [deps 5/5] RUN npm ci
+#15 CACHED
+
+#16 [deps 4/5] COPY package.json package-lock.json* ./
+#16 CACHED
+
+#17 [deps 3/5] WORKDIR /app
+#17 CACHED
+
+#18 [builder 3/6] COPY --from=deps /app/node_modules ./node_modules
+#18 CACHED
+
+#19 [builder 4/6] COPY . .
+#19 DONE 0.3s
+
+#20 [builder 5/6] RUN npx tsc --noEmit > tsc_output.txt 2>&1 || (cat tsc_output.txt && exit 1)
+#20 10.09 lib/actions/file.actions.ts(69,44): error TS2339: Property 'email' does not exist on type 'Document'.
+#20 10.09 npm notice
+#20 10.09 npm notice New major version of npm available! 10.8.2 -> 11.12.0
+#20 10.09 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.0
+#20 10.09 npm notice To update run: npm install -g npm@11.12.0
+#20 10.09 npm notice
+#20 ERROR: process "/bin/sh -c npx tsc --noEmit > tsc_output.txt 2>&1 || (cat tsc_output.txt && exit 1)" did not complete successfully: exit code: 1
+------
+ > [builder 5/6] RUN npx tsc --noEmit > tsc_output.txt 2>&1 || (cat tsc_output.txt && exit 1):
+10.09 lib/actions/file.actions.ts(69,44): error TS2339: Property 'email' does not exist on type 'Document'.
+10.09 npm notice
+10.09 npm notice New major version of npm available! 10.8.2 -> 11.12.0
+10.09 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.0
+10.09 npm notice To update run: npm install -g npm@11.12.0
+10.09 npm notice
+------
+Dockerfile:38
+
+--------------------
+
+  36 |     ENV NEXT_PUBLIC_APPWRITE_BUCKET
+=$NEXT_PUBLIC_APPWRITE_BUCKET
+
+  37 |     
+
+  38 | >>> RUN npx tsc --noEmit > 
+tsc_output.txt 2>&1 || (cat 
+tsc_output.txt && exit 1)
+
+  39 |     RUN 
+NODE_OPTIONS="--max-old-space-size=4096" 
+npm run build
+
+  40 |     
+
+--------------------
+
+failed to solve: process "/bin/sh -c npx 
+tsc --noEmit > tsc_output.txt 2>&1 || 
+(cat tsc_output.txt && exit 1)" did not 
+complete successfully: exit code: 1
+
+
+
+View build details: docker-desktop://dashb
+oard/build/default/default/d5zw6rm632f8qc1
+zhazww1ff9
+
